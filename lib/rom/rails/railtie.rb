@@ -78,7 +78,7 @@ module ROM
         configuration = create_configuration
 
         auto_registration_paths.each do |root_path|
-          configuration.auto_registration(::Rails.root.join(root_path), namespace: false)
+          configuration.auto_registration(::Rails.root.join(root_path), namespace: true)
         end
 
         ROM.container(configuration)
